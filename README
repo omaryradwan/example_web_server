@@ -1,0 +1,17 @@
+Name: Omar Radwan
+UID: 205105562
+Class: CS118 Spring 2020
+Project: Project 1
+
+This is a Readme for Omar's Radwan CS118 Project 1 for Spring 2020
+All server Work was made personally without assistance except resources fromn Discussions, and the HTTP manual Given to us, and the following
+
+Strtok() and it's use was learned from the man pages and GDB & Valgrind were used for discovery of segault errors and memory leaks
+
+the itoa function is not build into C by default, so I took inspiration from www.strudel.org.uk/itoa/
+
+High Level Design
+     The main function awaits for a connection from a client, and therefore it acts as the server, and then when it get's a connection, will use a function to check whterht the requested file exists, and if it does, then it will use another function to parse the request, extracting the necessary information from that that request, then will have different formats depending on the object type it needs to send out
+
+Problems Run Into:
+         Biggest problem I ran into was the fact that parsing the inistial header file was challenging due to me having to pass it around to multiple functions so then memory management became a slight issue, as I was getting free() and realloc() errors, so the solution was to use strtok(), which made life a lot easier.
